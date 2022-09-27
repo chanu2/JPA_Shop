@@ -19,10 +19,10 @@ public class SimpleOrderDto {
     public SimpleOrderDto(Order order) {   //Order order 이거는 상관없다
 
         orderId = order.getId();
-        name = order.getMember().getName();
+        name = order.getMember().getName();  // Lazy가 초기화 된다
         orderDate = order.getOrderDate();
         orderStatus = order.getStatus();
-        address = order.getDelivery().getAddress();
+        address = order.getDelivery().getAddress(); // Lazy가 초기화 된다
     }
 }
 
