@@ -26,7 +26,7 @@ public class Order {
     private Member member;
 
     @OneToMany(mappedBy = "order" ,cascade = CascadeType.ALL)
-    private List<OrderItem> orderItems = new ArrayList<>();
+    private List<OrderItem> orderItems = new ArrayList<>();  // 컬렉션 형태로 되어있다
 
     @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL) //cascade = CascadeType.ALL order만 persist해도 delivery까지 persist 된다
     @JoinColumn(name = "delivery_id")

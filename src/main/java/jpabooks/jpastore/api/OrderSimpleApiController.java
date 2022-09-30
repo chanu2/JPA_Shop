@@ -45,7 +45,12 @@ public class OrderSimpleApiController {
     public List<SimpleOrderDto> ordersV3(){
 
         List<Order> orders = orderRepository.findAllWithMemberDelivery();
+        List<SimpleOrderDto> result = orders.stream().map(o -> new SimpleOrderDto(o)).collect(Collectors.toList());
+        return result;
 
     }
+
+    //v4는 잘 사용하지 않지만 너무 많은 데이터 실시간 트레픽을 다룰 때는 고려해보는 것도 나쁘지 않다
+
 
 }

@@ -1,6 +1,7 @@
 package jpabooks.jpastore.repository;
 
 import jpabooks.jpastore.domain.Order;
+import jpabooks.jpastore.dto.SimpleOrderDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
@@ -65,6 +66,7 @@ public class OrderRepository {
                 " join fetch o.member"+
                 " join fetch o.delivery d",Order.class).getResultList();
     }
+
 
 //   public List<Order> findAll(OrderSearch orderSearch){
 //        em.createQuery("select o from Order o join o.member m " + "where o.status = :status "+" and m.name like :name", Order.class)
