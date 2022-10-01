@@ -24,5 +24,7 @@ public class SimpleOrderDto {
         orderStatus = order.getStatus();
         address = order.getDelivery().getAddress(); // Lazy가 초기화 된다
     }
+
+
 }
 
