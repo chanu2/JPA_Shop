@@ -26,10 +26,6 @@ public class OrderItem {
 
     private int OrderPrice;
 
-    protected OrderItem(){  // 제약해줘야한다
-
-    }
-
     private int count;
 
     //==생성 매서드==//
@@ -49,6 +45,8 @@ public class OrderItem {
         getItem().addStock(count);
     }
 
+
+    // git bash
     public int getTotalPrice() {
         return getOrderPrice() * getCount();
     }
